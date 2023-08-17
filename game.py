@@ -33,6 +33,10 @@ class Game:
                 pg.quit()
                 sys.exit()
 
+            if event.type == pg.KEYDOWN:
+                if event.key == pg.K_SPACE:
+                    self.player.shoot()
+
     def run(self):
         while True:
             self.check_events()
